@@ -1,6 +1,6 @@
-#include <Adafruit_NeoPixel.h>  //Utilizza libreria Neopixel di Adafruit
-#define PIN 2 //A quale pin è collegato il nostro led
-#define LUN 12 //Lunghezza striscia led
+#include <Adafruit_NeoPixel.h>  //Libreries Neopixel of Adafruit
+#define PIN 2 //Pin to connect led
+#define LGT 12 //Lenght of strip led
 #define delaytime 25
 
 Adafruit_NeoPixel LED = Adafruit_NeoPixel(LUN, PIN, NEO_GRB + NEO_KHZ800);
@@ -9,13 +9,13 @@ void setup(){}
 
 void loop(){
 
-  for(int i=0; i<LUN; i++){
+  for(int i=0; i<LGT; i++){
      LED.setPixelColor(i, LED.Color(254,254,0));
      LED.show();
      delay(delaytime/2);
   }
 
-  for(int i=0; i<LUN; i++){
+  for(int i=0; i<LGT; i++){
      LED.setPixelColor(i, LED.Color(0,0,0));
      LED.show();
      delay(delaytime/2);
